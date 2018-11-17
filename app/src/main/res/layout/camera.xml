@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|end"
             android:padding="20dp"
-            android:src="@drawable/ic_action_info" />
+            android:src="@drawable/ic_launcher_background" />
 
     </FrameLayout>
 
