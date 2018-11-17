@@ -513,6 +513,7 @@ public class Camera extends Fragment
         public void onCaptureStarted(CameraCaptureSession session, CaptureRequest request,
                                      long timestamp, long frameNumber) {
             String currentDateTime = generateTimestamp();
+            //#디렉토리 #폴더 #사진저장 #저장 #하나만 남기기
             File rawFile = new File(Environment.
                     getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM),
                     "RAW_" + currentDateTime + ".dng");
@@ -552,6 +553,7 @@ public class Camera extends Fragment
                     sb.append("Saving JPEG as: ");
                     sb.append(jpegBuilder.getSaveLocation());
                 }
+                //RAW나중에 지웁시다~~(2018.11.17일 301에서...호치킨 언제가?)
                 if (rawBuilder != null) {
                     rawBuilder.setResult(result);
                     if (jpegBuilder != null) sb.append(", ");
