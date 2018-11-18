@@ -12,7 +12,11 @@ public class Fragment_frame extends Fragment implements View.OnClickListener {
 
         final View view = inflater.inflate(R.layout.fragment_frame, container, false);
 
-        view.findViewById(R.id.button).setOnClickListener(this);
+        view.findViewById(R.id.button1).setOnClickListener(this);
+        view.findViewById(R.id.button2).setOnClickListener(this);
+        view.findViewById(R.id.button3).setOnClickListener(this);
+        view.findViewById(R.id.button4).setOnClickListener(this);
+        view.findViewById(R.id.button5).setOnClickListener(this);
 
         return view;
     }

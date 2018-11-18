@@ -23,14 +23,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_below="@id/texture"
-        android:background="#4285f4">
-
-        <!--<fragment
-            android:id="@+id/fragment"
-            android:name="com.jaewoo.camera.Fragment_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:layout="@layout/fragment_btn" />-->
+        android:background="#ffffff">
     </FrameLayout>
 
 </RelativeLayout>

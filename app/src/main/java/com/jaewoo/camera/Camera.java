@@ -514,9 +514,9 @@ public class Camera extends Fragment
                                      long timestamp, long frameNumber) {
             String currentDateTime = generateTimestamp();
             //#디렉토리 #폴더 #사진저장 #저장 #하나만 남기기
-            File rawFile = new File(Environment.
+            /*File rawFile = new File(Environment.
                     getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM),
-                    "RAW_" + currentDateTime + ".dng");
+                    "RAW_" + currentDateTime + ".dng");*/
             File jpegFile = new File(Environment.
                     getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM),
                     "JPEG_" + currentDateTime + ".jpg");
@@ -532,7 +532,7 @@ public class Camera extends Fragment
             }
 
             if (jpegBuilder != null) jpegBuilder.setFile(jpegFile);
-            if (rawBuilder != null) rawBuilder.setFile(rawFile);
+//            if (rawBuilder != null) rawBuilder.setFile(rawFile);
         }
 
         @Override
