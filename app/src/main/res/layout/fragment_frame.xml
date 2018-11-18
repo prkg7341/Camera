@@ -9,7 +9,7 @@
     <!--스크롤뷰에 들어가게 될 샘플 프레임들. 배경이 투명하지 않고 회색인 이유는 아직 모르겠음.-->
     <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center_vertical|end"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,14 +23,6 @@
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/heart" />
-
             <ImageButton
                 android:id="@+id/button1"
                 android:layout_width="0dp"
@@ -38,7 +30,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/heart" />
+                android:src="@drawable/person2" />
 
             <ImageButton
                 android:id="@+id/button2"
@@ -47,7 +39,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/heart" />
+                android:src="@drawable/person3" />
 
             <ImageButton
                 android:id="@+id/button3"
@@ -56,7 +48,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/heart" />
+                android:src="@drawable/person4" />
 
             <ImageButton
                 android:id="@+id/button4"
@@ -65,7 +57,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/heart" />
+                android:src="@drawable/person5" />
 
             <ImageButton
                 android:id="@+id/button5"
@@ -74,16 +66,34 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/heart" />
+                android:src="@drawable/person6" />
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/button6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
+                android:src="@drawable/person7" />
 
-                android:src="@drawable/heart" />
+            <ImageButton
+                android:id="@+id/button7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/person8" />
 
+            <ImageButton
+                android:id="@+id/button8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/person9" />
         </LinearLayout>
 
     </HorizontalScrollView>
