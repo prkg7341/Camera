@@ -10,10 +10,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
 
+    <!--선택한 프레임이 보여지게 하는 역할, 파일사이즈를 5:4로 맞춰서 제작함-->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/person2"/>
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -21,15 +23,25 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_below="@id/texture"
-        android:background="#4285f4">
+        android:background="#ffffff">
 
+        <!--갤러리로 이동하는 버튼-->
+        <ImageButton
+            style="@android:style/Widget.Material.Light.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:src="@drawable/round_button_gallery" />
+
+        <!--사진촬영하는 버튼-->
         <Button
             android:id="@+id/picture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/picture" />
+            android:background="@drawable/round_button"/>
 
+        <!--다양한 프레임을 선택하는 버튼-->
         <ImageButton
             android:id="@+id/info"
             android:contentDescription="@string/description_info"
@@ -37,42 +49,72 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|end"
-            android:padding="20dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/round_button_frames" />
 
     </FrameLayout>
+
+    <!--스크롤뷰에 들어가게 될 샘플 프레임들. 배경이 투명하지 않고 회색인 이유는 아직 모르겠음.-->
     <HorizontalScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_gravity="center_vertical|end">
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_alignParentBottom="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_gravity="center_vertical|end">
+            android:layout_gravity="center_vertical">
 
-            <TextView
-                android:layout_width="200dip"
+            <ImageView
+                android:src="@drawable/arrow_left_scroll"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#ff0000"
-                android:gravity="center"
-                android:text="#ff0000" />
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
 
-            <TextView
-                android:layout_width="200dip"
+            <ImageButton
+                android:src="@drawable/person2"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#00ff00"
-                android:gravity="center"
-                android:text="#00ff00" />
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
 
-            <TextView
-                android:layout_width="200dip"
+            <ImageButton
+                android:src="@drawable/person3"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#0000ff"
-                android:gravity="center"
-                android:text="#0000ff" />
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:src="@drawable/person4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:src="@drawable/person5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
+
+            <ImageView
+                android:src="@drawable/arrow_right_scroll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:scaleType="fitCenter"/>
+
         </LinearLayout>
 
     </HorizontalScrollView>
