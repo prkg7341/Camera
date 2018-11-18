@@ -66,6 +66,7 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -346,6 +347,9 @@ public class Camera extends Fragment
      */
     private long mCaptureTimer;
 
+    View view;
+    ImageView imageView;
+
     //**********************************************************************************************
 
     /**
@@ -605,11 +609,12 @@ public class Camera extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final View view  = inflater.inflate(R.layout.camera, container, false);
+        view  = inflater.inflate(R.layout.camera, container, false);
 
         getFragmentManager().beginTransaction()
                 .replace(R.id.frame, new Fragment_btn())
                 .commit();
+        imageView = (ImageView) view.findViewById(R.id.imageVIew);
 
         return view;
     }
@@ -1851,6 +1856,10 @@ public class Camera extends Fragment
                     .create();
         }
 
+    }
+
+    void setImage(int id){
+        imageView.setImageResource(id);
     }
 
 }
