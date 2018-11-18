@@ -1,10 +1,12 @@
 package com.jaewoo.camera;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
+
+    static Camera camera;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +21,11 @@ public class MainActivity extends Activity {
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.activity_main);
+
         if (null == savedInstanceState) {
+            camera = Camera.newInstance();
             getFragmentManager().beginTransaction()
-                    .replace(R.id.container, Camera.newInstance())
+                    .replace(R.id.container, camera)
                     .commit();
         }
     }

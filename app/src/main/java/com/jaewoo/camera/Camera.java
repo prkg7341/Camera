@@ -119,7 +119,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * </ul>
  */
 public class Camera extends Fragment
-        implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
+        implements FragmentCompat.OnRequestPermissionsResultCallback {
 
     /**
      * Conversion from screen rotation to JPEG orientation.
@@ -605,13 +605,19 @@ public class Camera extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.camera, container, false);
+        final View view  = inflater.inflate(R.layout.camera, container, false);
+
+        getFragmentManager().beginTransaction()
+                .replace(R.id.frame, new Fragment_btn())
+                .commit();
+
+        return view;
     }
 
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
-        view.findViewById(R.id.picture).setOnClickListener(this);
-        view.findViewById(R.id.info).setOnClickListener(this);
+//        view.findViewById(R.id.picture).setOnClickListener(this);
+//        view.findViewById(R.id.info).setOnClickListener(this);
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
 
         // Setup a new OrientationEventListener.  This is used to handle rotation events like a
@@ -672,25 +678,25 @@ public class Camera extends Fragment
         }
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.picture: {
-                takePicture();
-                break;
-            }
-            case R.id.info: {
-                Activity activity = getActivity();
-                if (null != activity) {
-                    new AlertDialog.Builder(activity)
-                            .setMessage(R.string.intro_message)
-                            .setPositiveButton(android.R.string.ok, null)
-                            .show();
-                }
-                break;
-            }
-        }
-    }
+//    @Override
+//    public void onClick(View view) {
+//        switch (view.getId()) {
+//            case R.id.picture: {
+//                takePicture();
+//                break;
+//            }
+//            case R.id.info: {
+//                Activity activity = getActivity();
+//                if (null != activity) {
+//                    new AlertDialog.Builder(activity)
+//                            .setMessage(R.string.intro_message)
+//                            .setPositiveButton(android.R.string.ok, null)
+//                            .show();
+//                }
+//                break;
+//            }
+//        }
+//    }
 
     /**
      * Sets up state related to camera that is needed before opening a {@link CameraDevice}.
@@ -1158,7 +1164,7 @@ public class Camera extends Fragment
      * longer moving, waits for auto-exposure to choose a good exposure value, and waits for
      * auto-white-balance to converge.
      */
-    private void takePicture() {
+    void takePicture() {
         synchronized (mCameraStateLock) {
             mPendingUserCaptures++;
 
