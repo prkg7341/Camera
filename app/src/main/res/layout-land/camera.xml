@@ -13,9 +13,10 @@
         android:layout_alignParentTop="true" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/person2"/>
+        android:background="@drawable/person2" />
 
     <FrameLayout
         android:id="@+id/frame"
