@@ -25,6 +25,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.Point;
@@ -1767,11 +1768,12 @@ public class Camera extends Fragment
                             })
                     .create();
         }
-
     }
 
     void setImage(int id){
         imageView.setImageResource(id);
     }
-
+    void setImage(Bitmap bitmap){
+        imageView.setImageBitmap(bitmap);
+    }
 }

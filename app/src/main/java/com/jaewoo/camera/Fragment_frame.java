@@ -5,12 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Fragment_frame extends Fragment implements View.OnClickListener {
-
-    ImageView imageView;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -24,8 +21,6 @@ public class Fragment_frame extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.button6).setOnClickListener(this);
         view.findViewById(R.id.button7).setOnClickListener(this);
         view.findViewById(R.id.button8).setOnClickListener(this);
-
-        imageView = (ImageView) view.findViewById(R.id.imageVIew);
 
         return view;
     }
