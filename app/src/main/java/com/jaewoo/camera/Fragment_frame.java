@@ -24,7 +24,6 @@ public class Fragment_frame extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.button6).setOnClickListener(this);
         view.findViewById(R.id.button7).setOnClickListener(this);
         view.findViewById(R.id.button8).setOnClickListener(this);
-        view.findViewById(R.id.button9).setOnClickListener(this);
 
         imageView = (ImageView) view.findViewById(R.id.imageVIew);
 
@@ -59,9 +58,6 @@ public class Fragment_frame extends Fragment implements View.OnClickListener {
                     break;
                 case R.id.button8:
                     MainActivity.camera.setImage(R.drawable.person8);
-                    break;
-                case R.id.button9:
-                    MainActivity.camera.setImage(R.drawable.person9);
                     break;
             }
         } catch (NullPointerException e){
