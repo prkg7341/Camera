@@ -24,6 +24,7 @@ public class Fragment_frame extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.button6).setOnClickListener(this);
         view.findViewById(R.id.button7).setOnClickListener(this);
         view.findViewById(R.id.button8).setOnClickListener(this);
+        view.findViewById(R.id.button9).setOnClickListener(this);
 
         imageView = (ImageView) view.findViewById(R.id.imageVIew);
 
@@ -36,27 +37,30 @@ public class Fragment_frame extends Fragment implements View.OnClickListener {
         try {
             switch (v.getId()) {
                 case R.id.button1:
-                    MainActivity.camera.setImage(R.drawable.person2);
+                    MainActivity.camera.setImage(R.drawable.person1);
                     break;
                 case R.id.button2:
-                    MainActivity.camera.setImage(R.drawable.person3);
+                    MainActivity.camera.setImage(R.drawable.person2);
                     break;
                 case R.id.button3:
-                    MainActivity.camera.setImage(R.drawable.person4);
+                    MainActivity.camera.setImage(R.drawable.person3);
                     break;
                 case R.id.button4:
-                    MainActivity.camera.setImage(R.drawable.person5);
+                    MainActivity.camera.setImage(R.drawable.person4);
                     break;
                 case R.id.button5:
-                    MainActivity.camera.setImage(R.drawable.person6);
+                    MainActivity.camera.setImage(R.drawable.person5);
                     break;
                 case R.id.button6:
-                    MainActivity.camera.setImage(R.drawable.person7);
+                    MainActivity.camera.setImage(R.drawable.person6);
                     break;
                 case R.id.button7:
-                    MainActivity.camera.setImage(R.drawable.person8);
+                    MainActivity.camera.setImage(R.drawable.person7);
                     break;
                 case R.id.button8:
+                    MainActivity.camera.setImage(R.drawable.person8);
+                    break;
+                case R.id.button9:
                     MainActivity.camera.setImage(R.drawable.person9);
                     break;
             }
@@ -69,3 +73,5 @@ public class Fragment_frame extends Fragment implements View.OnClickListener {
                 .commit();
     }
 }
+
+
