@@ -39,8 +39,10 @@ public class SubActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_sub);
 
+        // ArrayList에 갤러리에 표시할 파일의 Uri 저장
         imageList = getImages(this);
 
+        // 갤러리 초기화 및 표시
         galleryFling = (GalleryFling) findViewById(R.id.galleryFling);
         galleryFling.setAdapter(new GalleryAdapter(this));
         galleryFling.setSelection(0); // default view
